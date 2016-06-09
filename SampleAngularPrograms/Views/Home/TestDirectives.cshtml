@@ -1,0 +1,30 @@
+﻿
+{{testDitrectives}}
+
+<br />
+<test-element></test-element>
+
+<br />
+<div test-attribute> </div>
+
+<br />
+ <!-- directive: test-comment -->
+
+<br />
+<div class="test-class"></div>
+
+
+<div ng-controller="DirectiveControler">
+    <div entering="mouseoverinDirective()">Hover over to call controller function</div>
+
+    
+    <h1> {{directiveMessage}} </h1>
+</div>
+<p><b>
+   Transclusion:
+   The default for directives is to destructively replace the contents of the element meaning that the 'button' element will be removed entirely.
+   If the content within the panel element is intended to persist, the directive needs to have transclusion enabled:
+</b></p>
+<welcome>
+    <button>Click this button</button>
+</welcome>

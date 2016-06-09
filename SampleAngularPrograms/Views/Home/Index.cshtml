@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="Demo">
+<head>
+    <title></title>
+    <script src="~/Scripts/angular.min.js"></script>
+    <link href="~/Content/Styles/styles.css" rel="stylesheet" />
+
+    @*include this to configure using ngRoute using 'ngRoute' module*@
+    @*<script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/NgRoute.js"></script>*@ 
+
+     @*Include this to configure using third party UI-sref 'ui.router' module*@
+    <script src="~/Scripts/angular-ui-router.js"></script>
+    <script src="~/Scripts/UIRoute.js"></script>
+    <script src="~/Scripts/DirectiveScope.js"></script>
+    <base href="/" />
+</head>
+<body>
+    <table style="font-family: Arial">
+        <tr>
+            <td colspan="2" class="header">
+                <h1>
+                    Sample Angular Application
+                </h1>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftMenu">
+                @*use ui-sref to create links with UI route, ui-sref points to state of application
+                you may also use href to create links*@
+                <a ui-sref="home">Home</a>
+                <a ui-sref="courses">Courses</a>
+                <a ui-sref="studentParent.students" ui-sref-active="activeState">Students</a>
+                <a ui-sref="nestedScope">Nested Scope</a>
+                <a ui-sref="testDirectives">Test Sample Directives</a>
+                <a ui-sref="templateString">Test Template String</a>
+                <a ui-sref="directiveScope">Test Directive Scope</a>
+                
+            </td>
+            <td class="mainContent">
+                <ui-view></ui-view>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="footer">
+                <b>Website Footer</b>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

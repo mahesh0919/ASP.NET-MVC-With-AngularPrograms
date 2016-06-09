@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "StudentsSearchResults";
+}
+
+<h1> {{welcome}} </h1> 
+
+<h2>Students Search Results</h2>
+<ul>
+    <li ng-repeat="student in students">
+        <p> {{student.name}} </p> @*UIRoute*@
+    </li>
+</ul>

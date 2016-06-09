@@ -1,0 +1,24 @@
+﻿<h1>Student Details</h1>
+<p> <b> {{text}} </b></p>
+
+<table style="border:1px solid black">
+    <tr>
+        <td>Id</td>
+        <td>{{student.id}}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{student.name}}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{student.gender}}</td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td>{{student.city}}</td>
+    </tr>
+</table>
+@*<h4><a href="students">Back to Students list</a></h4>*@    @*ngRoute*@
+
+<h4><a ui-sref="studentParent.students">Back to Students list</a></h4>

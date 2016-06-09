@@ -1,0 +1,62 @@
+﻿.header {
+    width: 800px;
+    height: 80px;
+    text-align: center;
+    background-color: #BDBDBD;
+}
+
+.footer {
+    background-color: #BDBDBD;
+    text-align: center;
+}
+
+.leftMenu {
+    height: 500px;
+    background-color: #D8D8D8;
+    width: 150px;
+}
+
+.mainContent {
+    height: 500px;
+    background-color: #E6E6E6;
+    width: 650px;
+}
+
+a{
+    display:block;
+    padding:5px
+}
+
+.parent {
+    border: 20px solid #676767;
+    padding : 20px;
+}
+.parent,.directive {
+    position: relative;
+}
+.parent:after,.directive:after {
+    display: inline;
+    color: #fff;
+    font-size: normal;
+    position: absolute;
+    top:-20px;
+    left:-20px;
+    z-index: 100;
+    padding: 1px 5px;
+    background-color: rgba(0,0,0,0.5);
+}
+.parent:after {
+    content: "MainCtrl Scope";
+}
+.directive {
+    padding: 20px;
+    border: 20px solid #cbccdd;
+    margin-top: 20px;
+}
+.directive:after {
+    content: "Directive Scope"
+}
+.line {
+    border-bottom: 1px dotted #ccc;
+    padding: 5px 0;
+}

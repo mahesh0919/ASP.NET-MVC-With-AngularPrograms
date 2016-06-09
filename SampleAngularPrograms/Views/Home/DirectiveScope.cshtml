@@ -1,0 +1,43 @@
+﻿<head>
+    <script src="~/Scripts/DirectiveScope.js"></script>
+
+    @{
+        ViewBag.Title = "DirectiveScope";
+    }
+
+    <h2>Directive Scope</h2>
+
+</head>
+
+<body>
+    <div ng-controller="StudentController">
+        <b> (Parent Scope) : </b> {{name}} <br />
+        Change in Parent Scope Directive: <input type='text' ng-model='name' />
+        <p><b>********************************************************************************</b></p>
+
+        <b>Shared Scope Directive</b>
+        <shared-directive></shared-directive>
+        <p><b>********************************************************************************</b></p>
+
+        <b>Inherited Scope Directive</b>
+        <inherited-directive></inherited-directive>
+        <p><b>********************************************************************************</b></p>
+
+        <b> Isolate Scope {} Directive (new scope is created)</b>
+        <isolate-directive></isolate-directive>
+
+        <p><b>********************************************************************************</b></p>
+        <b> Passing/Sharing Data in Isolated Scope</b>
+        <div class="parent">
+            <div class="line">
+                Name inside parent scope is: <strong>{{name}}</strong>
+                <input type="button" ng-click="reverseName()" value="Reverse name" />
+            </div>
+            <div class="line">
+                Address inside parent scope is: <strong>{{address|uppercase}}</strong>
+            </div>
+            <b>Directive Scope </b>
+            <div class="directive" isolated-directive-advanced name="{{name}}" address="address" reverse="reverseName()"></div>
+        </div>
+        </div>
+</body>

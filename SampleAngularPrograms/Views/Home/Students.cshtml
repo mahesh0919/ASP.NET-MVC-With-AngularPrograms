@@ -1,0 +1,16 @@
+﻿<p> <b> {{text}} </b></p>
+
+<input type="text" ng-model="name"/>
+<button ng-click="StudentSearch()">Search</button>
+
+{{ header }}
+<ul>
+    <li ng-repeat="student in students">
+        @*<a href="students/{{student.id}}">  {{student.name}}  </a>*@   @*ngRoute*@
+
+        <a ui-sref="studentParent.studentDetails({id: student.id})"> {{student.name}} </a> @*UIRoute*@
+    </li>
+</ul>
+
+
+<button ng-click="reloadData()"> Reload Student Data </button>

@@ -1,0 +1,27 @@
+﻿<h2>Nestedscope without alias</h2>
+<p> <b> {{text}} </b></p>
+<div ng-controller="countryController">
+    {{name}}       @*// here this model is bind to $scope.name*@
+</div>
+
+<div ng-controller="stateController">
+    {{name}}
+</div>
+
+<div ng-controller="cityController">
+    {{name}}
+</div>
+
+
+<br />
+<h1> Nested scope with alias </h1>
+
+<div ng-controller="countryController as countryCtrl">
+    {{countryCtrl.name}}                      @*// here this model is bind to this.name*@
+    <div ng-controller="stateController as stateCtrl">
+        {{countryCtrl.name }} -- {{stateCtrl.name}}
+        <div ng-controller="cityController as cityCtrl">
+            {{countryCtrl.name }} -- {{stateCtrl.name}} -- {{cityCtrl.name}}
+        </div>
+    </div>
+</div>
