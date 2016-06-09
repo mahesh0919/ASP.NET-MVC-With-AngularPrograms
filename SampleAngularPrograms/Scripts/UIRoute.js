@@ -1,6 +1,6 @@
 ﻿/// <reference path="angular-ui-router.js" />
 var app = angular
-            .module("Demo", ["ui.router"])               // inject UI.Route as dependency
+            .module("Demo", ["ui.router", "ExternalModule"])      // inject UI.Route and external module as dependency
             .config(function ($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider, $locationProvider) {
 
                 $urlMatcherFactoryProvider.caseInsensitive(true); // Case insencitive URL's

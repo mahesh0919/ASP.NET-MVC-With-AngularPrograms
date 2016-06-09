@@ -124,7 +124,7 @@
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\DirectiveScope.js" />
+    <Content Include="Scripts\ExternalModule.js" />
     <Content Include="Scripts\NgRoute.js" />
     <Content Include="Scripts\UIRoute.js" />
     <Content Include="Web.config" />
