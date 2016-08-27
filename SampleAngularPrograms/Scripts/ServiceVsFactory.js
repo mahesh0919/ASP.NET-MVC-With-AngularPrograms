@@ -12,3 +12,16 @@ app.service("ServiceHitCounter", function () {
     };
 });
 
+//-----------Creating Angular Factory----------
+//When you’re using a Factory you create an object, add properties to it, then return that same object. 
+//When you pass this service into your controller, 
+//those properties on the object will now be available in that controller through your factory.
+app.factory('FactoryHitCounter', function () {
+    var fac = {};
+    fac.hitCounter = 0;
+    fac.HitMe = function () {
+        fac.hitCounter++;
+        return fac.hitCounter;
+    };
+    return fac;
+});

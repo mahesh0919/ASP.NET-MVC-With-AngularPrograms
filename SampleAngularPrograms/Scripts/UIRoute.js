@@ -124,7 +124,7 @@ var app = angular
                         controllerAs: "servFactCtrl"         // Alias to controller, insted of $scope use this object to bind data
                     })
             })
-            .controller('serviceVsFactory', function ($scope, ServiceHitCounter) {
+            .controller('serviceVsFactory', function ($scope, ServiceHitCounter, FactoryHitCounter) {
                 $scope.HitCounterService = function () {
                    $scope.ServiceHitCounterVar = ServiceHitCounter.HitMe();
                 };
