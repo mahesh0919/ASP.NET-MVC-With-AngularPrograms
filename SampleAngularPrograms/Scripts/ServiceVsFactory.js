@@ -25,3 +25,27 @@ app.factory('FactoryHitCounter', function () {
     };
     return fac;
 });
+
+
+//-----------Creating Angular Providers------------
+//Providers are the only service you can pass into your .config() function. 
+//Use a provider when you want to provide module-wide configuration for your service object before making it available.
+//-----------Creating Angular Providers------------
+//Providers are the only service you can pass into your .config() function. 
+//Use a provider when you want to provide module-wide configuration for your service object before making it available.
+//provider style, full blown, configurable version     
+app.provider('ProviderHitCounter', function () {
+    this.hitCounter = 100;
+    this.$get = function () {
+        var hitCounter = this.hitCounter;
+        return {
+            HitMeCounter: function () {
+                return hitCounter;
+            }
+        }
+    };
+    this.sethitCounter = function (hitCounter) {
+        this.hitCounter = hitCounter;
+    };
+});
+

@@ -1,7 +1,11 @@
 ﻿/// <reference path="angular-ui-router.js" />
 var app = angular
             .module("Demo", ["ui.router", "ExternalModule"])      // inject UI.Route and external module as dependency
-            .config(function ($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider, $locationProvider) {
+            .config(function ($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider, $locationProvider, ProviderHitCounterProvider) {
+
+                //Initialize default value from provider
+                ProviderHitCounterProvider.sethitCounter(100);
+
 
                 $urlMatcherFactoryProvider.caseInsensitive(true); // Case insencitive URL's
 
@@ -124,7 +128,12 @@ var app = angular
                         controllerAs: "servFactCtrl"         // Alias to controller, insted of $scope use this object to bind data
                     })
             })
-            .controller('serviceVsFactory', function ($scope, ServiceHitCounter, FactoryHitCounter) {
+            .controller('serviceVsFactory', function ($scope, ServiceHitCounter, FactoryHitCounter, ProviderHitCounter) {
+
+                //Initialize defaut value from provider
+                $scope.ServiceHitCounterVar = ProviderHitCounter.HitMeCounter();
+                $scope.FactoryHitCounterVar = ProviderHitCounter.HitMeCounter();
+
                 $scope.HitCounterService = function () {
                    $scope.ServiceHitCounterVar = ServiceHitCounter.HitMe();
                 };
