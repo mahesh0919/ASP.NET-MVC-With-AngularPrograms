@@ -116,7 +116,21 @@ var app = angular
                         url: "/directiveScope",
                         templateUrl: "Home/DirectiveScope",
                         controller: "StudentController"
-                     })
+                    })
+                    .state("serviceVsFactory", {
+                        url: "/serviceVsFactory",                    // This will generate href atrribute
+                        templateUrl: "Home/serviceVsFactory",        // template URL to navigate
+                        controller: "serviceVsFactory",    // Controller to pass data to view
+                        controllerAs: "servFactCtrl"         // Alias to controller, insted of $scope use this object to bind data
+                    })
+            })
+            .controller('serviceVsFactory', function ($scope, ServiceHitCounter) {
+                $scope.HitCounterService = function () {
+                   $scope.ServiceHitCounterVar = ServiceHitCounter.HitMe();
+                };
+                $scope.HitCounterFactory = function () {
+                    $scope.FactoryHitCounterVar = FactoryHitCounter.HitMe();
+                };
             })
             .controller('StudentController', ['$scope', function ($scope) {
                 $scope.name = "Mahesh Pendker";

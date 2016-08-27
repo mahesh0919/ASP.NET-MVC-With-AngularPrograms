@@ -126,6 +126,7 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\ExternalModule.js" />
     <Content Include="Scripts\NgRoute.js" />
+    <Content Include="Scripts\ServiceVsFactory.js" />
     <Content Include="Scripts\UIRoute.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -177,6 +178,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\DirectiveScope.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\serviceVsFactory.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

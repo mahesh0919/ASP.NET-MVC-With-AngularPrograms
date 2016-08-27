@@ -97,6 +97,11 @@ namespace AngularRouting.Controllers
             return View();
         }
 
+        public ActionResult serviceVsFactory()
+        {
+            return View();
+        }
+
 
     }
 }
